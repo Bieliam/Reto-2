@@ -59,7 +59,7 @@ body{
 .texto{
     grid-row: 2/3;
     margin: 5px 10px;
-    line-height: 30px;
+    line-height: 27.5px;
 }
 
 .perfume{
