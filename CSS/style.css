@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cyan: hsl(158, 44%, 52%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+}
+
+.container{
+    margin: 0 auto ;
+    width: 345px;
+    height: 667px;
+}
+
+.grid{
+    display: grid;
+    margin:  20px auto;
+    /* width: 90vw; */
+    height: 90%;
+    background-color: var(--White);
+    grid-template-columns: 345px;
+    grid-template-rows: 40% 40% 10% 10%;
+    border-radius: 25px;
+    justify-items: center;
+    border-radius: 10px;
+
+}
+
+/*Estilo de las imagines*/
+.imagen{
+    grid-row: 1/2;
+}
+
+.img_mobile, .imagen, .img_desktop{
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.img_desktop{
+    display: none;
+}
+
+/*Estilo de los textos */
+.texto{
+    grid-row: 2/3;
+    margin: 5px 10px;
+    line-height: 30px;
+}
+
+.perfume{
+    margin: 10px auto ;
+    letter-spacing: 5px;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    color: var(--Darkgrayishblue);
+}
+
+.titulo{
+    margin: 5px auto;
+    color: var(--Verydarkblue);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.cuerpo{
+    margin: 5px auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--Darkgrayishblue);
+}
+
+/*Estilo de los precios*/
+.dinero{
+    /* font-family: 'Fraunces', serif; */
+    grid-row: 3/4;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Oferta{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--Cyan);
+}
+.precio{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--Darkgrayishblue);
+    text-decoration: line-through;
+}
+
+/* Estilos del boton y su icono */
+.compra{
+    grid-row: 4/5;
+    width: 150px;
+    height: 50px;
+    color: var(--White);
+    background-color: var(--Cyan);
+    border-radius: 15px;
+}
+
+.compra:hover{
+    background-color: var(--Darkcyan);
+}
+.icono{
+    width: 15px;
+}
+
+
+.attribution{
+    font-size: 11px; 
+    text-align: center; 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 1440px){
+    .container{
+        width: 600px;
+        height: 450px;
+        margin: 10% auto;
+    }
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 65% 17.5% 17.5%;
+    }
+
+    .imagen{
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    .img_mobile{
+        display:none;
+    }
+    .img_desktop{
+        display: block;
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+    }
+    .texto{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .dinero{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .compra{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    
+}
